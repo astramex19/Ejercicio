@@ -43,19 +43,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         if let dictionnary : NSDictionary = attributes as NSDictionary? {
             if let newArr : NSArray = dictionnary.object(forKey: "product.description") as? NSArray {
                 cell.titulo.text =  (newArr.firstObject as! String)
+            }else{
+                cell.titulo.text = "Sin descripcion"
             }
         }
         
         if let dictionnary : NSDictionary = attributes as NSDictionary? {
             if let newArr : NSArray = dictionnary.object(forKey: "sku.list_Price") as? NSArray {
                 cell.precio.text = "Precio $" + (newArr.firstObject as! String)
+            }else{
+                cell.titulo.text = "Sin precio"
             }
+                
         }
         
         if let dictionnary : NSDictionary = attributes as NSDictionary? {
             if let newArr : NSArray = dictionnary.object(forKey: "department") as? NSArray {
                 cell.ubicacion.text = "Departamento " + (newArr.firstObject as! String)
+            }else{
+                cell.titulo.text = "Sin departamento"
             }
+                
         }
         
         if let dictionnary : NSDictionary = attributes as NSDictionary? {
@@ -85,6 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         guard let text = textfieldBuscar.text, !text.isEmpty else {
             return
         }
+        productos.removeAll()
         buscar(value: textfieldBuscar.text!)
     }
     
