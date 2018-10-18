@@ -13,6 +13,7 @@
 		1F124DDE2178538000923529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F124DDC2178538000923529 /* Main.storyboard */; };
 		1F124DE02178538200923529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F124DDF2178538200923529 /* Assets.xcassets */; };
 		1F124DE32178538200923529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F124DE12178538200923529 /* LaunchScreen.storyboard */; };
+		1FE528DE217876D3001C9C3B /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE528DD217876D3001C9C3B /* CellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1F124DDF2178538200923529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F124DE22178538200923529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F124DE42178538200923529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FE528DD217876D3001C9C3B /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		960A8D75EC73511ACE73575C /* Pods-Ejercicio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ejercicio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ejercicio/Pods-Ejercicio.release.xcconfig"; sourceTree = "<group>"; };
 		BD12E57CA86EBBFB09F2FD32 /* Pods-Ejercicio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ejercicio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ejercicio/Pods-Ejercicio.debug.xcconfig"; sourceTree = "<group>"; };
 		D46D22913E96FAE4C4C17222 /* Pods_Ejercicio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ejercicio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 				1F124DDF2178538200923529 /* Assets.xcassets */,
 				1F124DE12178538200923529 /* LaunchScreen.storyboard */,
 				1F124DE42178538200923529 /* Info.plist */,
+				1FE528DD217876D3001C9C3B /* CellTableViewCell.swift */,
 			);
 			path = Ejercicio;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE528DE217876D3001C9C3B /* CellTableViewCell.swift in Sources */,
 				1F124DDB2178538000923529 /* ViewController.swift in Sources */,
 				1F124DD92178538000923529 /* AppDelegate.swift in Sources */,
 			);
