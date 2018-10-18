@@ -138,8 +138,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
                 }
                 
             }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            
+            if self.productos.count > 0{
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }else {
+                let alert = UIAlertController(title: nil, message: "No se encontraron productos", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+               self.present(alert, animated: true, completion: nil)
+            
             }
             
         }
