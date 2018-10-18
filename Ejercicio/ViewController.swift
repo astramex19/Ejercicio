@@ -9,8 +9,10 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDataSource {
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var productos = [[String: Any]]()
@@ -42,6 +44,9 @@ class ViewController: UIViewController {
                                                     
                                                     self.productos = json6
                                                 }
+                                                DispatchQueue.main.async {
+                                                    self.tableView.reloadData()
+                                                }
                                             }
                                         }
                                     }
@@ -57,7 +62,23 @@ class ViewController: UIViewController {
             
         }
     }
-
+    
+    // MARK: - delegados de la tabla
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return productos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let dato = productos[indexPath.row]
+        let attributes = dato["attributes"]
+        print(attributes)
+        return cell
+        
+    }
 
 }
 
