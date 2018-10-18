@@ -83,6 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         guard let text = textfieldBuscar.text, !text.isEmpty else {
             return false
         }
+        productos.removeAll()
         buscar(value: textfieldBuscar.text!)
         
         return false
