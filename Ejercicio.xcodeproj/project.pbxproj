@@ -14,6 +14,7 @@
 		1F124DE02178538200923529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F124DDF2178538200923529 /* Assets.xcassets */; };
 		1F124DE32178538200923529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F124DE12178538200923529 /* LaunchScreen.storyboard */; };
 		1FE528DE217876D3001C9C3B /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE528DD217876D3001C9C3B /* CellTableViewCell.swift */; };
+		1FE528E3217894FC001C9C3B /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE528E2217894FC001C9C3B /* Extensiones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		1F124DE22178538200923529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F124DE42178538200923529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FE528DD217876D3001C9C3B /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		1FE528DF217892ED001C9C3B /* Ejercicio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ejercicio-Bridging-Header.h"; sourceTree = "<group>"; };
+		1FE528E2217894FC001C9C3B /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
 		960A8D75EC73511ACE73575C /* Pods-Ejercicio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ejercicio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ejercicio/Pods-Ejercicio.release.xcconfig"; sourceTree = "<group>"; };
 		BD12E57CA86EBBFB09F2FD32 /* Pods-Ejercicio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ejercicio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ejercicio/Pods-Ejercicio.debug.xcconfig"; sourceTree = "<group>"; };
 		D46D22913E96FAE4C4C17222 /* Pods_Ejercicio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ejercicio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +81,8 @@
 				1F124DE12178538200923529 /* LaunchScreen.storyboard */,
 				1F124DE42178538200923529 /* Info.plist */,
 				1FE528DD217876D3001C9C3B /* CellTableViewCell.swift */,
+				1FE528DF217892ED001C9C3B /* Ejercicio-Bridging-Header.h */,
+				1FE528E2217894FC001C9C3B /* Extensiones.swift */,
 			);
 			path = Ejercicio;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				TargetAttributes = {
 					1F124DD42178538000923529 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -192,12 +198,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ejercicio/Pods-Ejercicio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -212,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE528DE217876D3001C9C3B /* CellTableViewCell.swift in Sources */,
+				1FE528E3217894FC001C9C3B /* Extensiones.swift in Sources */,
 				1F124DDB2178538000923529 /* ViewController.swift in Sources */,
 				1F124DD92178538000923529 /* AppDelegate.swift in Sources */,
 			);
@@ -360,6 +369,7 @@
 			baseConfigurationReference = BD12E57CA86EBBFB09F2FD32 /* Pods-Ejercicio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YD8MQU959E;
 				INFOPLIST_FILE = Ejercicio/Info.plist;
@@ -369,6 +379,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FabianRomero.Ejercicio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ejercicio/Ejercicio-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +391,7 @@
 			baseConfigurationReference = 960A8D75EC73511ACE73575C /* Pods-Ejercicio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YD8MQU959E;
 				INFOPLIST_FILE = Ejercicio/Info.plist;
@@ -388,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FabianRomero.Ejercicio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ejercicio/Ejercicio-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
