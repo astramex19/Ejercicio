@@ -37,19 +37,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellTableViewCell
-        let dato = productos[indexPath.row]
-        let attributes = dato["attributes"] as? [String:Any]
+        let datos = productos[indexPath.row]
+        
 
-        if let dictionnary : NSDictionary = attributes as NSDictionary? {
-            if let newArr : NSArray = dictionnary.object(forKey: "product.description") as? NSArray {
+        if let dictionnary : NSDictionary = datos as NSDictionary? {
+            if let newArr : NSArray = dictionnary.object(forKey: "productDisplayName") as? NSArray {
                 cell.titulo.text =  (newArr.firstObject as! String)
             }else{
                 cell.titulo.text = "Sin descripcion"
             }
         }
         
-        if let dictionnary : NSDictionary = attributes as NSDictionary? {
-            if let newArr : NSArray = dictionnary.object(forKey: "sku.list_Price") as? NSArray {
+        if let dictionnary : NSDictionary = datos as NSDictionary? {
+            if let newArr : NSArray = dictionnary.object(forKey: "salePrice") as? NSArray {
                 cell.precio.text = "Precio $" + (newArr.firstObject as! String)
             }else{
                 cell.titulo.text = "Sin precio"
@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
                 
         }
         
-        if let dictionnary : NSDictionary = attributes as NSDictionary? {
+        if let dictionnary : NSDictionary = datos as NSDictionary? {
             if let newArr : NSArray = dictionnary.object(forKey: "department") as? NSArray {
                 cell.ubicacion.text = "Departamento " + (newArr.firstObject as! String)
             }else{
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
                 
         }
         
-        if let dictionnary : NSDictionary = attributes as NSDictionary? {
+        if let dictionnary : NSDictionary = datos as NSDictionary? {
             if let newArr : NSArray = dictionnary.object(forKey: "sku.thumbnailImage") as? NSArray {
                 let imageView = cell.viewWithTag(1) as! UIImageView                
                 imageView.sd_setImage(with: URL(string: (newArr.firstObject as! String)))
